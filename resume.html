@@ -9,11 +9,15 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <header role="banner">
-    <div class="container">
-      <h1>Resume</h1>
-      <nav role="navigation" aria-label="Primary" class="primary-nav">
-        <ul>
+  <header class="site-header" role="banner">
+    <div class="container header-row">
+      <div class="site-brand">
+        <h1>Syed Noushad M</h1>
+        <p class="lead">Python · React · JavaScript · Java · Accessible Web</p>
+      </div>
+      <nav role="navigation" aria-label="Primary" class="primary-nav site-nav">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryMenu">Menu</button>
+        <ul id="primaryMenu" class="menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -21,6 +25,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme">☾</button>
     </div>
   </header>
 

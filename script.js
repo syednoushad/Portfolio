@@ -1,5 +1,26 @@
 // Accessible navigation toggle
 document.addEventListener('DOMContentLoaded', function () {
+  // Restore and toggle the selected color theme.
+  (function setupTheme() {
+    var root = document.documentElement;
+    var themeToggle = document.querySelector('.theme-toggle');
+    var storedTheme = localStorage.getItem('portfolio-theme');
+    if (storedTheme) root.dataset.theme = storedTheme;
+    if (!themeToggle) return;
+    var updateThemeButton = function () {
+      var dark = root.dataset.theme === 'dark';
+      themeToggle.textContent = dark ? '☀' : '☾';
+      themeToggle.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+    };
+    updateThemeButton();
+    themeToggle.addEventListener('click', function () {
+      var nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = nextTheme;
+      localStorage.setItem('portfolio-theme', nextTheme);
+      updateThemeButton();
+    });
+  })();
+
   // Navigation toggle (mobile)
   (function setupNav() {
     var navToggle = document.getElementById('navToggle');

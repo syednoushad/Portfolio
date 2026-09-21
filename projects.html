@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Projects by Syed Noushad — E-Commerce and To-do List examples.">
+  <title>Projects — Syed Noushad</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+  <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header role="banner">
+    <div class="container header-row">
+      <div class="site-brand">
+        <h1>Syed Noushad M</h1>
+        <p class="lead">Python · React · JavaScript · Java · Accessible Web</p>
+      </div>
+      <nav role="navigation" aria-label="Primary" class="primary-nav site-nav">
+        <button id="navToggle" aria-expanded="false" aria-controls="primaryMenu">Menu</button>
+        <ul id="primaryMenu" class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section aria-labelledby="proj-list">
+      <h2 id="proj-list">Project List</h2>
+      <div class="projects">
+        <article class="card" aria-labelledby="p1">
+          <h3 id="p1">E‑Commerce</h3>
+          <p>Full-stack features for product listings, cart and checkout UI with attention to accessibility and mobile UX.</p>
+          <div><span class="tag">React</span><span class="tag">CSS</span></div>
+        </article>
+
+        <article class="card" aria-labelledby="p2">
+          <h3 id="p2">To‑do List</h3>
+          <p>Accessible, local-first to-do list app with offline support and keyboard navigation.</p>
+          <div><span class="tag">HTML</span><span class="tag">JavaScript</span></div>
+        </article>
+
+        <article class="card" aria-labelledby="p3">
+          <h3 id="p3">Utilities & Experiments</h3>
+          <p>Small Python utilities, data parsing scripts, and Java practice projects completed during internship.</p>
+          <div><span class="tag">Python</span><span class="tag">Java</span></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p><a href="index.html">Back to home</a></p>
+    </div>
+  </footer>
+  <script src="./script.js" defer></script>
+</body>
+</html>

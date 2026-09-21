@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Contact Syed Noushad — accessible contact form.">
+  <title>Contact — Syed Noushad</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+  <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header role="banner">
+    <div class="container header-row">
+      <div class="site-brand">
+        <h1>Syed Noushad M</h1>
+        <p class="lead">Python · React · JavaScript · Java · Accessible Web</p>
+      </div>
+      <nav role="navigation" aria-label="Primary" class="primary-nav site-nav">
+        <button id="navToggle" aria-expanded="false" aria-controls="primaryMenu">Menu</button>
+        <ul id="primaryMenu" class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section aria-labelledby="contactform">
+      <h2 id="contactform">Get in touch</h2>
+      <form id="contactForm" action="#" method="post" novalidate aria-labelledby="contactform" role="form">
+        <fieldset>
+          <legend>Contact details</legend>
+
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required aria-required="true" autocomplete="name">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required aria-required="true" autocomplete="email">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+
+          <div id="formErrors" aria-live="polite" class="visually-hidden"></div>
+
+          <button type="submit">Send message</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p><a href="index.html">Back to home</a></p>
+    </div>
+  </footer>
+  <script src="./script.js" defer></script>
+</body>
+</html>
